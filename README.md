@@ -1,6 +1,7 @@
 # cerveceriaIngDeSoftware
 
-Integrantes:
-Ignacio Jélvez
-Fabian Morag
-Felipe Salazar
+Integrantes: 
+
+- Ignacio Jélvez
+- Fabian Morag
+- Felipe Salazar
