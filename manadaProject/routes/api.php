@@ -17,9 +17,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/usuarios', 'UsuarioController@index');
-Route::get('/usuarios/{id}', 'UsuarioController@mostrar');
-Route::post('/usuarios', 'UsuarioController@guardar');
-Route::post('/usuarios/{id}/answers', 'UsuarioController@answer');
-Route::delete('/usuarios/{id}', 'UsuarioController@delete');
-Route::delete('/usuarios/{id}/answers', 'UsuarioController@resetAnswers');
+Route::get('/usuarios', 'UserController@index');
+Route::get('/usuarios/{id}', 'UserController@show');
+Route::post('/usuarios', 'UserController@store');
+Route::post('/usuarios/{id}/answers', 'UserController@answer');
+Route::delete('/usuarios/{id}', 'UserController@delete');
+Route::delete('/usuarios/{id}/answers', 'UserController@resetAnswers');
