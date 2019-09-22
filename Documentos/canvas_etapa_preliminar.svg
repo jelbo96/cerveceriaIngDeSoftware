@@ -15,7 +15,7 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
    sodipodi:docname="canvas_etapa_preliminar.svg">
   <defs
      id="defs2">
@@ -208,16 +208,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="840.17667"
-     inkscape:cy="750.32328"
+     inkscape:cx="862.40003"
+     inkscape:cy="1695.8261"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1-8"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1001"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
-     inkscape:window-maximized="1" />
+     inkscape:window-height="1006"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     showguides="false" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -433,7 +434,7 @@
              width="555.33881"
              id="rect4006-6-9" /></flowRegion><flowPara
            id="flowPara7907"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans">Este Canvas presenta sólo la interfaz utilizada por el anfitrión, durante el evento.</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans">Este Canvas presenta sólo la interfaz utilizada por el anfitrión, durante la gestión de insumos e inventario.</flowPara><flowPara
            id="flowPara6128"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"> </flowPara><flowPara
            id="flowPara7993"
@@ -449,25 +450,31 @@
              width="712.68768"
              id="rect4006-3" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold'"
-           id="flowPara4008-3">Juan Ruiz, Cliente, gerente de la empresa</flowPara><flowPara
+           id="flowPara4008-3">Juan Ruiz, Gerente de la empresa</flowPara><flowPara
            id="flowPara4159"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans">Le interesa tener control sobre los insumos, así como mantener el proceso cervecero en constante funcionamiento.</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans">Dueño y Fundador. Le interesa tener control sobre los insumos, así como mantener el proceso cervecero en constante funcionamiento ante eventualidades de producción.</flowPara><flowPara
            id="flowPara4145"
            style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold'">Carlos Mejías, Experto en administración bodeguera</flowPara><flowPara
            id="flowPara4161"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans">Le interesa la gestión de la bodega y la recepción de los insumos.</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans">Operario, se encarga la gestión de la bodega diariamente y distribuye los turnos de recepción o entrega de productos.</flowPara><flowPara
            id="flowPara4186"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"><flowSpan
-             id="flowSpan4158"
-             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold'">Guillermo Herrera</flowSpan></flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold'">Guillermo Herrera, Encargado de Inventario de producción.</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"
-           id="flowPara4160"> </flowPara><flowPara
+           id="flowPara4193">Su rol se encarga de evaluar los litros producidos, contabilizar las botellas/barriles y realizar su registro, asignando la salida por pedidos.</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+           id="flowPara4215" /><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+           id="flowPara4217">sasas</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+           id="flowPara4219">Productores.</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+           id="flowPara4160">Encargados del uso de insumo para la producción de cerveza, llevan un registro estimado de esto y son supervisados constantemente en el proceso. </flowPara><flowPara
            id="flowPara4188"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"> </flowPara><flowPara
            id="flowPara4163"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"> </flowPara><flowPara
            id="flowPara4165"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"> </flowPara></flowRoot>      <flowRoot
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"> sd</flowPara></flowRoot>      <flowRoot
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'7th Service';-inkscape-font-specification:'7th Service';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          id="flowRoot4214"
          xml:space="preserve"><flowRegion
@@ -490,7 +497,7 @@
              width="501.37659"
              id="rect4006-3-5" /></flowRegion><flowPara
            id="flowPara4165-4"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans">Carlos Mejías es el principal anfitrión con mayor experiencia, su conocimiento se basa en el desempeño del rubro hace mas de cinco años( no posee educación en el tema), su principal colaborador es Guillermo Herrera, egresado con poca experiencia, egresado de un instituto de educación superior</flowPara></flowRoot>      <g
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans">Carlos Mejías es el principal anfitrión con mayor experiencia, su conocimiento se basa en el desempeño del rubro hace mas de cinco años, su principal colaborador es Guillermo Herrera, egresado de un instituto de educación superior con poca experiencia laboral. Ningun productor cuenta</flowPara></flowRoot>      <g
          transform="translate(333.42857,-616.57142)"
          id="g5649">
         <flowRoot
@@ -654,19 +661,19 @@
                style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans;text-align:center;text-anchor:middle">alto</flowPara></flowRoot>        </g>
       </g>
       <rect
-         y="-1328.4954"
-         x="1694.8571"
-         height="14.285714"
-         width="241.42857"
+         y="-1328.5975"
+         x="1694.7549"
+         height="14.489971"
+         width="150.7191"
          id="rect5699"
-         style="fill:#0000ff;fill-opacity:1;stroke:#888888;stroke-opacity:1" />
+         style="fill:#0000ff;fill-opacity:1;stroke:#888888;stroke-width:0.79574257;stroke-opacity:1" />
       <rect
-         y="-1251.3524"
-         x="1677.7142"
+         y="-1247.3118"
+         x="1788.8311"
          height="14.285714"
-         width="341.48804"
+         width="200.06668"
          id="rect5699-2"
-         style="fill:#0000ff;fill-opacity:1;stroke:none" />
+         style="fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.76541972" />
       <rect
          y="-1172.781"
          x="1846.4503"
@@ -686,21 +693,25 @@
              width="586.24023"
              id="rect4006-3-5-9" /></flowRegion><flowPara
            id="flowPara4165-4-0"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans">- Gestionar agenda.</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans">- Gestionar agenda de recepción y entregas de pedidos.</flowPara><flowPara
            id="flowPara5797"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans">- Recepción del camión que entrega insumos.</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans">- Coordinar despacho de camiones con insumo y registrarlos en el inventario.</flowPara><flowPara
            id="flowPara5793"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans">- Verificar estado de los productos y cantidad asociada.</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"
            id="flowPara4162" /><flowPara
            id="flowPara5795"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans" /><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+           id="flowPara4189" /><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+           id="flowPara4191">- Registrar producción diaria y semanal.</flowPara><flowPara
            id="flowPara5799"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans">-Realizar registro del ingreso de materias primas.</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans">- Registrar y asegurar entrega de pedidos.</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"
            id="flowPara4187" /><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"
-           id="flowPara4164">-Llevar insumos a bodega e informar de la recepción</flowPara><flowPara
+           id="flowPara4164">- Encontrar alternativas de insumos y personal para el despacho.</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"
            id="flowPara4166" /><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"
@@ -716,7 +727,11 @@
              width="556.32434"
              id="rect4006-3-5-9-3" /></flowRegion><flowPara
            id="flowPara5854"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans">El anfitrión se encuentra en la bodega y sala de producción alternadamente, éste último es donde hace control y seguimiento del proceso de la cerveza, cada cierto tiempo recibe llamadas de Juan Ruiz para agendar pedidos, a los cuáles recibe a las afueras de la empresa, chequea que correspondan a lo agendado, los levanta hasta ponerlos en un carro y posteriormente los lleva a la bodega.</flowPara></flowRoot>      <flowRoot
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans">Empresa de 8 personas, 1 turno al día.</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+           id="flowPara4233">Sólo los stakeholders señalados cuentan con estudios o experiencia destacable en el rubro.</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans"
+           id="flowPara4235">El anfitrión se encuentra en la bodega y sala de producción alternadamente, en esta última es donde hace control y seguimiento del proceso de la cerveza, cada cierto tiempo recibe llamadas de Juan Ruiz para agendar pedidos, chequea que la producción correspondan a lo agendado y realiza las gestiones.</flowPara></flowRoot>      <flowRoot
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'7th Service';-inkscape-font-specification:'7th Service';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          id="flowRoot5868"
          xml:space="preserve"><flowRegion
@@ -900,6 +915,6 @@
              height="224.25386"
              x="173.74623"
              y="-461.39951" /></flowRegion><flowPara
-           id="flowPara222"></flowPara></flowRoot>    </g>
+           id="flowPara222" /></flowRoot>    </g>
   </g>
 </svg>
