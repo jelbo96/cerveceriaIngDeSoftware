@@ -19,7 +19,7 @@ class CreateCheckInsTable extends Migration
             $table->timestamp('check_in_date')->default(now());
             $table->unsignedInteger('input_id');
             $table->integer('total_quantity');
-            $table->foreign('input_id')->references('input_id')->on('inputs'); 
+            #$table->foreign('input_id')->references('input_id')->on('inputs'); 
         });
     }
 
