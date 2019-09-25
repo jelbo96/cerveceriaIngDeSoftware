@@ -13,6 +13,7 @@ class CreateClientsTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('clients');
         Schema::create('clients', function (Blueprint $table) {
             $table->bigIncrements('client_id')->unsigned();
             $table->string('name', 45);

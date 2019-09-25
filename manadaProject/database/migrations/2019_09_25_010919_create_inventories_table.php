@@ -13,6 +13,7 @@ class CreateInventoriesTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('inventory');
         Schema::create('inventory', function (Blueprint $table) {
             $table->bigIncrements('inventory_id')->unsigned();
             $table->unsignedInteger('input_id');

@@ -13,6 +13,7 @@ class CreateDeliveriesTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('deliveries');
         Schema::create('deliveries', function (Blueprint $table) {
             $table->bigIncrements('delivery_id')->unsigned();
             $table->timestamp('delivery_date')->default(now());

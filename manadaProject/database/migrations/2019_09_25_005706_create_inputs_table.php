@@ -13,6 +13,7 @@ class CreateInputsTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('inputs');
         Schema::create('inputs', function (Blueprint $table) {
             $table->bigIncrements('input_id')->unsigned();
             $table->string('name', 45);
