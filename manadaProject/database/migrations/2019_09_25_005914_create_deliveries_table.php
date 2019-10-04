@@ -15,15 +15,15 @@ class CreateDeliveriesTable extends Migration
     {
         Schema::dropIfExists('deliveries');
         Schema::create('deliveries', function (Blueprint $table) {
-            $table->bigIncrements('delivery_id')->unsigned();
+            $table->bigIncrements('id')->unsigned();
             $table->timestamp('delivery_date')->default(now());
             $table->integer('state');
             $table->string('type_beer', 45);
             $table->integer('liters');
-            $table->unsignedInteger('employee_id');
-            // $table->foreign('employee_id')->references('employee_id')->on('employees');
-            $table->unsignedInteger('client_id');
-            // $table->foreign('client_id')->references('client_id')->on('clients');            
+            $table->bigInteger('employee_id')->unsigned()->index();;
+            $table->foreign('employee_id')->references('id')->on('employees')->onDelete('cascade');
+            $table->bigInteger('client_id')->unsigned()->index();;
+            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');            
         });
     }
 

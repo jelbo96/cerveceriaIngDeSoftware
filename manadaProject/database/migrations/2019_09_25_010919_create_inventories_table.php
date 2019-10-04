@@ -15,10 +15,10 @@ class CreateInventoriesTable extends Migration
     {
         Schema::dropIfExists('inventory');
         Schema::create('inventory', function (Blueprint $table) {
-            $table->bigIncrements('inventory_id')->unsigned();
-            $table->unsignedInteger('input_id');
+            $table->bigIncrements('id')->unsigned();
             $table->integer('total_quantity');
-            // $table->foreign('input_id')->references('input_id')->on('inputs'); 
+            $table->bigInteger('input_id')->unsigned()->index();
+            $table->foreign('input_id')->references('id')->on('inputs')->onDelete('cascade'); 
         });
     }
 

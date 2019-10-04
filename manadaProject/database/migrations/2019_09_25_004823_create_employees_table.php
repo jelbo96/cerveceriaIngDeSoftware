@@ -15,7 +15,7 @@ class CreateEmployeesTable extends Migration
     {
         Schema::dropIfExists('employees');
         Schema::create('employees', function (Blueprint $table) {
-            $table->bigIncrements('employee_id')->unsigned();
+            $table->bigIncrements('id')->unsigned();
             $table->string('name', 45);
             $table->string('working_hours', 45);
             $table->string('role', 45);
