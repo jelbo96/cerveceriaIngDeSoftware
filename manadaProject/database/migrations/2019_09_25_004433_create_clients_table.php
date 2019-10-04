@@ -15,7 +15,7 @@ class CreateClientsTable extends Migration
     {
         Schema::dropIfExists('clients');
         Schema::create('clients', function (Blueprint $table) {
-            $table->bigIncrements('client_id')->unsigned();
+            $table->bigIncrements('id')->unsigned();
             $table->string('name', 45);
             $table->string('address', 45);
             $table->string('contact_number', 45);

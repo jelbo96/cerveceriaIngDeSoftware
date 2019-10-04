@@ -15,7 +15,7 @@ class CreateProvidersTable extends Migration
     {
         Schema::dropIfExists('providers');
         Schema::create('providers', function (Blueprint $table) {
-            $table->bigIncrements('provider_id')->unsigned();
+            $table->bigIncrements('id')->unsigned();
             $table->string('company_name', 45);
             $table->string('contact_name', 45);
             $table->string('contact_number', 45);
