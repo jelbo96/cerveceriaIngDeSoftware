@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OtrocomponenteComponent{
 
-  title='Soy el otro componente'
-  subtitulo='Soy el subtitulo'
   constructor() { }
 
 

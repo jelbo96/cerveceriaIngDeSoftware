@@ -17,9 +17,9 @@ import { UserComponent } from './user/user.component'
 import { DataService } from './data.service';
 import {HttpClientModule} from '@angular/common/http';
 
-const routes: Routes[] = [
+const routes: Route[] = [
   {
-    path: 'a', component: OtrocomponenteComponent
+    path: '', component: OtrocomponenteComponent
   },
   {
     path:'home', component: HomeComponent
