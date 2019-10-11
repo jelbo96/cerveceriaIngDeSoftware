@@ -16,6 +16,7 @@ import { UserComponent } from './user/user.component'
 //servicios
 import { DataService } from './data.service';
 import {HttpClientModule} from '@angular/common/http';
+import { RegistrarEntregaComponent } from './registrar-entrega/registrar-entrega.component';
 
 const routes: Route[] = [
   {
@@ -23,8 +24,10 @@ const routes: Route[] = [
   },
   {
     path:'home', component: HomeComponent
+  },
+  {
+    path:'registrar-entrega', component: RegistrarEntregaComponent
   }
-
 ];
 
 @NgModule({
@@ -33,6 +36,7 @@ const routes: Route[] = [
     HomeComponent,
     OtrocomponenteComponent,
     UserComponent,
+    RegistrarEntregaComponent,
 
   ],
   imports: [
