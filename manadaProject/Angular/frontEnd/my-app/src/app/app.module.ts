@@ -27,6 +27,9 @@ const routes: Route[] = [
   },
   {
     path:'registrar-entrega', component: RegistrarEntregaComponent
+  },
+  {
+    path:'entregas-semanales', component: UserComponent
   }
 ];
 

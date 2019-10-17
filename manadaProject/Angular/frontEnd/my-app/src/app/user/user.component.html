@@ -1,1 +1,40 @@
-<p>Hola que tal</p>
+
+<button type="button" class="btn btn-primary btn-sm" (click)="mostrar=true">Opciones avanzadas</button>
+
+
+<div class="input-group mb-3" *ngIf="mostrar">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Ordenar por</label>
+        </div>
+        <select class="custom-select" id="idCerveza" #NombreCerveza>
+          <option value="1">Día</option>
+          <option value="2">Semana</option>
+          <option value="3">Mes</option>
+        </select>
+</div>        
+<!--
+<div class="input-group">
+  <input type="text" aria-label="First name" class="form-control" placeholder="Cantidad">
+  <input type="text" aria-label="Last name" class="form-control" placeholder="Ciudad de destino">
+</div>
+</div>
+-->
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+         <th scope="col">#</th>
+         <th scope="col">NombreCerveza</th>
+         <th scope="col">Cantidad</th>
+          <th scope="col">Destino</th>        
+        </tr>
+    </thead>
+        <tbody>
+          <tr *ngFor="let user of users; let i=index">
+            <th scope="row"><button (click)= "deleteUser(user)" class="btn btn-secondary btn-sm">delete</button></th>
+            <td>{{user.nombreCerveza}}</td>
+            <td>{{user.cantidad}}</td>
+            <td>{{user.destino}}</td>
+          </tr>
+     </tbody>
