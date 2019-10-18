@@ -23,3 +23,4 @@ Route::post('/usuarios', 'UserController@store');
 Route::post('/usuarios/{id}/answers', 'UserController@answer');
 Route::delete('/usuarios/{id}', 'UserController@delete');
 Route::delete('/usuarios/{id}/answers', 'UserController@resetAnswers');
+Route::resource('employee', 'EmployeeController');

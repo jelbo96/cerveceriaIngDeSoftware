@@ -11,6 +11,7 @@ class CreateEmployeesTable extends Migration
      *
      * @return void
      */
+    
     public function up()
     {
         Schema::dropIfExists('employees');
