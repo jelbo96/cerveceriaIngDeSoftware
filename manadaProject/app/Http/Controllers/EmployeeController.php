@@ -38,10 +38,15 @@ class EmployeeController extends Controller
     {
         //
 
-        //Instanciamos la clase Pokemons
+        //Instanciamos la clase Employee
         $employee = new Employee;
         //Declaramos el nombre con el nombre enviado en el request
         $employee->name = $request->name;
+        $employee->working_hours = $request->working_hours;
+        $employee->role = $request->role;
+        $employee->phone_number = $request->phone_number;
+        $employee->address = $request->address;
+
         //Guardamos el cambio en nuestro modelo
         $employee->save();
     }
