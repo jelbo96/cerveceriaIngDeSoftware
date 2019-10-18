@@ -6,7 +6,7 @@ import {DataService} from '../data.service';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent {
-  users:[] = [{
+  private _users: [] = [{
     "nombreCerveza": "jelbo",
     "cantidad": 20,
     "destino": "villarrica"
@@ -15,8 +15,14 @@ export class UserComponent {
     "nombreCerveza": "yoshi",
     "cantidad": 30,
     "destino": "valdivia"
-  }  
-  ]
+  }
+  ];
+  public get users(): [] {
+    return this._users;
+  }
+  public set users(value: []) {
+    this._users = value;
+  }
 
  mostrarInput=false;
 
