@@ -9,7 +9,7 @@ class Employee extends Model
     //
     public $timestamps = false;
     protected $primaryKey = 'id';
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'working_hours', 'role', 'address', 'phone_number'];
     //protected $fillable = ['working_hours'];
     //protected $fillable = ['role'];
     //protected $fillable = ['address'];
