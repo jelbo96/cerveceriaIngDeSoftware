@@ -26,3 +26,4 @@ Route::delete('/usuarios/{id}/answers', 'UserController@resetAnswers');
 Route::resource('employee', 'EmployeeController');
 Route::resource('client', 'ClientController');
 Route::resource('bash','BashController');
+Route::resource('delivery', 'DeliveryController');
