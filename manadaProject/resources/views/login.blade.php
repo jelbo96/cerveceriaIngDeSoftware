@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
+<body> <!-- 
     <div class="container"></div>
         <hr>
         @if (session()->has('flash'))
@@ -45,6 +45,9 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+        <div>
+            <p style="text-align:center">Para usar la app dirijase a Angular y corra el proyecto angular</p>
         </div>
 </body>
 </html>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Delivery;
+use App\Bash;
 
 class DeliveryController extends Controller
 {
@@ -38,7 +39,7 @@ class DeliveryController extends Controller
     {
         $delivery = new Delivery;
 
-        $delivery->delivery_date = $request->delivery_date;
+        $delivery->delivery_date = date('Y-m-d H:i:s');
         $delivery->type_beer = $request->type_beer;
         $delivery->liters = $request->liters;
         $delivery->folio = $request->folio;
@@ -47,7 +48,22 @@ class DeliveryController extends Controller
         $delivery->client_id = $request->client_id;
         $delivery->bash_id = $request->bash_id;
 
-        $delivery->save();
+        $bash = Bash::find($request->bash_id);
+
+        /** Si los litros actuales son menos que los que tiene el bash retornar un error */
+
+        if ($request->liters > $bash->liters_now){
+            /** Retornar un error */
+            echo "Error! Se ingresaron mas litros de los disponibles";
+        } else {
+             /** Litros actuales = litros actuales - litros que se ingresaron */
+            $bash->liters_now = $bash->liters_now - $request->liters;;
+	        $bash->save();
+
+            $delivery->save();
+        }
+
+       
 
     }
 
