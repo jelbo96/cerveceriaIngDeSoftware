@@ -1,4 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
+
+import {ClientService} from '../services/client.service'
+import {Client} from '../model/client'
+
 import {DataService} from '../data.service';
 @Component({
   selector: 'app-user',
@@ -6,20 +10,8 @@ import {DataService} from '../data.service';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent {
-  users = [{
-    "nombreCerveza": "jelbo",
-    "cantidad": 20,
-    "destino": "villarrica"
-  },
-  {
-    "nombreCerveza": "yoshi",
-    "cantidad": 30,
-    "destino": "valdivia"
-  }]
-  ;
-
-
- mostrarInput=false;
-
-
+  constructor(private clientService: ClientService) {}
+  private clientlist = this.clientService.get_clients();
+  ngOnInit() {
+  }
 }

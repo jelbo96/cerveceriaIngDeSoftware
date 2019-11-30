@@ -1,4 +1,4 @@
-
+<!--
 <button type="button" class="btn btn-primary btn-sm" (click)="mostrar=true">Opciones avanzadas</button>
 
 
@@ -12,7 +12,7 @@
           <option value="3">Mes</option>
         </select>
 </div>        
-<!--
+
 <div class="input-group">
   <input type="text" aria-label="First name" class="form-control" placeholder="Cantidad">
   <input type="text" aria-label="Last name" class="form-control" placeholder="Ciudad de destino">
@@ -21,7 +21,7 @@
 -->
 
 
-<table class="table">
+<!--<table class="table">
     <thead class="thead-dark">
         <tr>
          <th scope="col">#</th>
@@ -37,4 +37,29 @@
             <td>{{user.cantidad}}</td>
             <td>{{user.destino}}</td>
           </tr>
-     </tbody>
+     </tbody> -->
+<div class="container responsive-container">
+    <h2>Clientes</h2>
+    <hr />
+    <button type="button" class="btn btn-dark">Añadir Cliente</button> <br /><br />
+  <table class="table bordered-table" >
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Nombre del Cliente</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Número de Contacto</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clientlist | async">
+
+        <td>{{client.name}}</td>
+        <td>{{client.address}}</td>
+        <td>{{client.contact_number}}</td>
+        <td> AÑADIR ACCIONES AQUI! </td>
+      </tr>
+    </tbody>
+  </table>
+ 
+</div>
