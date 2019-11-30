@@ -11,4 +11,8 @@ constructor(private http:HttpClient) { }
 public get_clients(){
 return this.http.get(this.baseUrl+'/client');
 }
+
+public get_deliveries(){
+  return this.http.get(this.baseUrl+'/delivery');
+  }
 }

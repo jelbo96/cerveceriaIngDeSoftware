@@ -1,0 +1,36 @@
+<div class="container responsive-container">
+    <h2>Entregas</h2>
+    <hr />
+    <button type="button" class="btn btn-dark" routerLink="/registrar-entrega">Registrar Entrega</button> <br /><br />
+    <table class="table bordered-table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Fecha - Hora</th>
+                <th scope="col">Tipo de Cerveza</th>
+                <th scope="col">Litros</th>
+                <th scope="col">Tipo de empaque</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Bash</th>
+                <th scope="col">Información Adicional</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let delivery of deliverieslist | async">
+
+                <td>{{delivery.delivery_date}}</td>
+                <td>{{delivery.type_beer}}</td>
+                <td>{{delivery.liters}}</td>
+                
+                <td>{{delivery.package}}</td>
+                <td>{{delivery.client_id}}</td>
+                <td>{{delivery.bash_id}}</td>
+                <td>{{delivery.additional_info}}</td>
+                <td> AÑADIR ACCIONES AQUI! </td>
+
+
+            </tr>
+        </tbody>
+    </table>
+
+</div>

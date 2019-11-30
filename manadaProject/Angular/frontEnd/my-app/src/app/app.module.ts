@@ -17,6 +17,7 @@ import { UserComponent } from './user/user.component'
 import { DataService } from './data.service';
 import {HttpClientModule} from '@angular/common/http';
 import { RegistrarEntregaComponent } from './registrar-entrega/registrar-entrega.component';
+import { DeliveriesComponent } from './deliveries/deliveries.component';
 
 const routes: Route[] = [
   {
@@ -30,6 +31,9 @@ const routes: Route[] = [
   },
   {
     path:'clientes', component: UserComponent
+  },
+  {
+    path:'deliveries', component: DeliveriesComponent
   }
 ];
 
@@ -40,6 +44,7 @@ const routes: Route[] = [
     OtrocomponenteComponent,
     UserComponent,
     RegistrarEntregaComponent,
+    DeliveriesComponent,
 
   ],
   imports: [
