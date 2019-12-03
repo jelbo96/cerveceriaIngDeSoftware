@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import {ClientService} from '../services/client.service'
+import {Client} from '../model/client'
+
 @Component({
   selector: 'app-registrar-entrega',
   templateUrl: './registrar-entrega.component.html',
@@ -7,25 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrarEntregaComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {}
-  /*
-  addUser(newUser){
-    if(newUser.value.length>0){
-      this.users.push(newUser.value);
-    }
-    newUser.value='';
-    return false;
+  constructor(private clientService: ClientService) {}
+  private clientlist = this.clientService.get_clients();
+  private bashlist = this.clientService.get_bash();
+  ngOnInit() {
   }
-
-  deleteUser(user){
-    for(let i =0; i<this.users.length; i++){
-      if(user==this.users[i]){
-        this.users.splice(i,1);
-      }
-    }
-  }
-  */
 
 }

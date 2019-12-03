@@ -12,7 +12,15 @@ public get_clients(){
 return this.http.get(this.baseUrl+'/client');
 }
 
+public get_bash(){
+  return this.http.get(this.baseUrl+'/bash');
+  }
+
 public get_deliveries(){
   return this.http.get(this.baseUrl+'/delivery');
+  }
+
+public add_deliveries(delivery){
+    return this.http.post(this.baseUrl+'/delivery', delivery);
   }
 }

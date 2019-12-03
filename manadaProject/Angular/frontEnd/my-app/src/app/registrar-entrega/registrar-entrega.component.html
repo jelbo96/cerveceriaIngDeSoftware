@@ -1,10 +1,12 @@
 <div class="responsive-container">
-<h2>Registrar Entrega</h2>
-<hr />
-<form>
+  <h2>Registrar Entrega</h2>
+  <hr />
+  <form>
+    <!-- Tipo cerveza, Litros, Tipo de Empaque, Cliente, Bash, Información adicional-->
     <div class="form-group">
-      <label>Tipo Cerveza: </label>
+      <label class="label-left">Tipo Cerveza: </label>
       <div class="form-check form-check-inline">
+        <!-- Aqui hacer un for con los checkbox a partir de los datos -->
         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
         <label class="form-check-label" for="inlineRadio1">Rubia</label>
       </div>
@@ -17,24 +19,50 @@
         <label class="form-check-label" for="inlineRadioetc">etc</label>
       </div>
     </div>
-    
-    <div class="form-group">
-        <label>Cantidad: </label>
-        <select class="form-control-inline">
-            <option>1</option>
-            <option>2</option>
-          </select>    
-    </div>
+
 
     <div class="form-group">
-        <label>Restaurant/Botillería: </label>
-        <select class="form-control-inline">
-            <option>NOMBRE 1</option>
-            <option>NOMBRE 2</option>
-          </select>    
+      <label class="label-left">Litros: </label>
+      <input type="number" name="quantity" min="1" max="500">
     </div>
 
-    
-    <button type="submit" class="btn btn-primary">Confirmar</button>
+    <!-- Esto se puede dejar como opcion o texto-->
+    <div class="form-group">
+      <label class="label-left">Tipo de Empaque: </label>
+      <select class="form-control-inline">
+        <option>Botella</option>
+        <option>Barril</option>
+      </select>
+    </div>
+
+    <!-- Cliente - Obtenerlos desde la base de datos -->
+    <div class="form-group">
+      <label class="label-left">Cliente: </label>
+      <select class="form-control-inline">
+        <option *ngFor="let client of clientlist | async">
+          <p>{{client.name}}</p>
+        </option>
+      </select>
+    </div>
+
+
+    <!-- Bash - Obtenerlos desde la base de datos -->
+    <div class="form-group">
+        <label class="label-left">Bash: </label>
+        <select class="form-control-inline">
+          <option *ngFor="let bash of bashlist | async">
+            <p>{{bash.name_bash}}</p>
+          </option>
+        </select>
+      </div>
+
+    <!-- Información adicional - Cuadro de texto -->
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Información Adicional:</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+
+
+    <button type="submit" class="btn btn-dark">Confirmar</button>
   </form>
-  </div>
+</div>
