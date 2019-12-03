@@ -18,6 +18,7 @@ import { DataService } from './data.service';
 import {HttpClientModule} from '@angular/common/http';
 import { RegistrarEntregaComponent } from './registrar-entrega/registrar-entrega.component';
 import { DeliveriesComponent } from './deliveries/deliveries.component';
+import { CrearClienteComponent } from './crear-cliente/crear-cliente.component';
 
 const routes: Route[] = [
   {
@@ -33,6 +34,9 @@ const routes: Route[] = [
     path:'clientes', component: UserComponent
   },
   {
+    path:'crear-cliente', component: CrearClienteComponent
+  },
+  {
     path:'deliveries', component: DeliveriesComponent
   }
 ];
@@ -45,6 +49,8 @@ const routes: Route[] = [
     UserComponent,
     RegistrarEntregaComponent,
     DeliveriesComponent,
+    CrearClienteComponent,
+
 
   ],
   imports: [
