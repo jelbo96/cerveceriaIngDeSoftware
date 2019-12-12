@@ -1,6 +1,7 @@
 <div class="responsive-container">
     <h2>Añadir Cliente</h2>
     <hr />
+    <p> * Por ahora todos los campos son requeridos </p>
     <!-- Nombre del cliente Direccion Número de contacto -->
     <form [formGroup]="clientForm" (ngSubmit)="onSubmit(clientForm.value)">
         <div class="form-group">

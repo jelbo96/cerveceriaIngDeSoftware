@@ -37,11 +37,7 @@ export class RegistrarEntregaComponent implements OnInit {
     console.warn('Se ha leido el formulario', data);
     this.deliveryForm.reset();
     //Aqui tengo que hacer el post
-    //this.clientService.add_deliveries(data);
-
-
-
-    console.warn(data.name, data.address, data.contact_number);
+    this.clientService.add_deliveries(data);
   }
 
   ngOnInit() {

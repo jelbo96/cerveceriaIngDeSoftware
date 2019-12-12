@@ -16,7 +16,8 @@ class DeliveryController extends Controller
     public function index()
     {
         //
-        return Delivery::all();
+       // return Delivery::all();
+        return Delivery::with(['bash', 'client'])->get();
     }
 
     /**
@@ -48,20 +49,23 @@ class DeliveryController extends Controller
         $delivery->client_id = $request->client_id;
         $delivery->bash_id = $request->bash_id;
 
-        $bash = Bash::find($request->bash_id);
+
+        $delivery->save();
+        
+        //$bash = Bash::find($request->bash_id);
 
         /** Si los litros actuales son menos que los que tiene el bash retornar un error */
 
-        if ($request->liters > $bash->liters_now){
+        //if ($request->liters > $bash->liters_now){
             /** Retornar un error */
-            echo "Error! Se ingresaron mas litros de los disponibles";
-        } else {
+          //  echo "Error! Se ingresaron mas litros de los disponibles";
+        //} else {
              /** Litros actuales = litros actuales - litros que se ingresaron */
-            $bash->liters_now = $bash->liters_now - $request->liters;;
-	        $bash->save();
+          //  $bash->liters_now = $bash->liters_now - $request->liters;;
+	      //  $bash->save();
 
-            $delivery->save();
-        }
+           // $delivery->save();
+      //  }
 
        
 

@@ -1,6 +1,7 @@
 <div class="responsive-container">
   <h2>Registrar Entrega</h2>
   <hr />
+  <p> * Por ahora todos los campos son requeridos </p>
   <form [formGroup]="deliveryForm" (ngSubmit)="onSubmit(deliveryForm.value)">
     <!-- Tipo cerveza, Litros, Tipo de Empaque, Cliente, Bash, Información adicional-->
     <div class="form-group">
@@ -27,8 +28,8 @@
     <div class="form-group">
       <label class="label-left">Tipo de Empaque: </label>
       <select class="form-control-inline"  formControlName="package">
-        <option>Botella</option>
-        <option>Barril</option>
+        <option>1</option>
+        <option>2</option>
       </select>
     </div>
 
@@ -36,7 +37,7 @@
     <div class="form-group">
       <label class="label-left">Cliente: </label>
       <select class="form-control-inline" formControlName="client"> 
-        <option *ngFor="let client of clientlist | async">
+        <option *ngFor="let client of clientlist | async" value="{{client.id}}">
           <p>{{client.name}}</p>
         </option>
       </select>
@@ -47,7 +48,7 @@
     <div class="form-group">
         <label class="label-left">Bash: </label>
         <select class="form-control-inline" formControlName="bash">
-          <option *ngFor="let bash of bashlist | async">
+          <option *ngFor="let bash of bashlist | async"  value="{{bash.id}}">
             <p>{{bash.name_bash}}</p>
           </option>
         </select>
