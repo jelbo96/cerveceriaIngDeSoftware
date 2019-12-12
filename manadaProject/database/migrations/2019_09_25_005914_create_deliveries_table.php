@@ -21,7 +21,7 @@ class CreateDeliveriesTable extends Migration
             $table->integer('liters'); //litros
             $table->integer('folio');//folio
             $table->string('additional_info', 200); //info adicional
-            $table->integer('package');//envasado, 1=botella o 2=barril
+            $table->string('package', 45);//envasado, 1=botella o 2=barril
             
             $table->bigInteger('client_id')->unsigned()->index(); //cliente (foreign)
             $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');    
