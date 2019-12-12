@@ -2,18 +2,18 @@
     <h2>Añadir Cliente</h2>
     <hr />
     <!-- Nombre del cliente Direccion Número de contacto -->
-    <form>
+    <form [formGroup]="clientForm" (ngSubmit)="onSubmit(clientForm.value)">
         <div class="form-group">
             <label class="label-left">Nombre del Cliente: </label>
-            <input placeholder="nombre">
+            <input placeholder="nombre" id="name" type="text" formControlName="name">
         </div>
         <div class="form-group">
             <label class="label-left">Dirección: </label>
-            <input placeholder="dirección">
+            <input placeholder="dirección" id="address" type="text" formControlName="address">
         </div>
         <div class="form-group">
             <label class="label-left">Telefono de Contacto: </label>
-            <input type="tel" name="telefono" placeholder="teléfono">
+            <input type="tel" name="telefono" placeholder="teléfono" id="contact_number" formControlName="contact_number">
         </div>
 
 

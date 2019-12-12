@@ -36,15 +36,8 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $client = new Client;
-
-        $client->name = $request->name;
-        $client->address = $request->address;
-        $client->contact_number = $request->contact_number;
-
-        $client->save();
-
+        $client = Client::create($request->all());
+        return $client;
     }
 
     /**
