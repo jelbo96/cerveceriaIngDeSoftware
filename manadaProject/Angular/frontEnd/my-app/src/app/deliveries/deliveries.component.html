@@ -11,7 +11,7 @@
                 <th scope="col">Tipo de empaque</th>
                 <th scope="col">Cliente</th>
                 <th scope="col">Bash</th>
-                <th scope="col">Información Adicional</th>
+              
                 <th scope="col">Acciones</th>
             </tr>
         </thead>
@@ -25,8 +25,12 @@
                 <td>{{delivery.package}}</td>
                 <td>{{delivery.client.name}}</td>
                 <td>{{delivery.bash.name_bash}}</td>
-                <td>{{delivery.additional_info}}</td>
-                <td style="width:230px">
+               
+                <td style="width:270px">
+                        <ng-template #tipContent>{{delivery.additional_info}}</ng-template>
+                
+                        <a type="button" class="btn btn-outline-secondary" [ngbTooltip]="tipContent"> <i class="fas fa-info icon"></i></a>
+                        <span> &nbsp; </span>
                     <a href="#" class="btn btn-secondary"> <i class="fas fa-edit icon"></i> Editar</a>
                     <span> &nbsp; </span>
                 
@@ -38,4 +42,5 @@
         </tbody>
     </table>
 
+   
 </div>

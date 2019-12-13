@@ -1,35 +1,39 @@
 <div class="container-home">
 
   <div class="container-alerts">
-    <div class="warning">
-      <ngb-alert [dismissible]="false">
-        <div class="alert-icon">
-          <div>
-            <strong>Alerta!</strong> Solo quedan:
-            <h2>50 litros </h2>
-            en el bash <strong> Nombre </strong>
-          </div>
-          <div>
-              <i class="fas fa-exclamation icon" ></i>
-          </div>
-        </div>
-      </ngb-alert>
-    </div>
-
-    <div class="warning">
-        <ngb-alert [dismissible]="false" type="danger">
+    <div *ngFor="let bash of bashlist | async">
+      <div class="warning" *ngIf="(bash.liters_now < 250 && bash.liters_now > 100)">
+        <ngb-alert [dismissible]="false">
           <div class="alert-icon">
             <div>
               <strong>Alerta!</strong> Solo quedan:
-              <h2>5 litros </h2>
-              en el bash <strong> Nombre </strong>
+              <h2>{{bash.liters_now}} litros </h2>
+              de cerveza {{bash.type_beer}} en el <strong> {{bash.name_bash}} </strong>
             </div>
             <div>
-                <i class="fas fa-exclamation icon" ></i>
+              <i class="fas fa-exclamation icon"></i>
             </div>
           </div>
         </ngb-alert>
       </div>
+    </div>
+
+    <div *ngFor="let bash of bashlist | async">
+      <div class="warning" *ngIf="(bash.liters_now <= 100)">
+        <ngb-alert [dismissible]="false" type="danger">
+          <div class="alert-icon">
+            <div>
+              <strong>Alerta!</strong> Solo quedan:
+              <h2>{{bash.liters_now}} litros </h2>
+              de cerveza {{bash.type_beer}} en el <strong> {{bash.name_bash}} </strong>
+            </div>
+            <div>
+              <i class="fas fa-exclamation icon"></i>
+            </div>
+          </div>
+        </ngb-alert>
+      </div>
+    </div>
 
 
   </div>
