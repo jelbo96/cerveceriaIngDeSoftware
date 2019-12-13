@@ -1,0 +1,28 @@
+<div class="responsive-container">
+    <h2>Añadir Bash</h2>
+    <hr />
+    <p> * Por ahora todos los campos son requeridos </p>
+    <!-- name_bash type_beer capacity -->
+    <form [formGroup]="bashForm" (ngSubmit)="onSubmit(bashForm.value)">
+        <div class="form-group">
+            <label class="label-left">Nombre del Bash: </label>
+            <input placeholder="nombre" id="name" type="text" formControlName="name_bash">
+        </div>
+        <div class="form-group">
+            <label class="label-left">Tipo Cerveza: </label>
+            <select class="form-control-inline" formControlName="type_beer">
+              <option>Rubia</option>
+              <option>Morena</option>
+              <option>etc</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="label-left">Capacidad: </label>
+            <input type="number" name="quantity" min="1" max="500"  formControlName="capacity">
+            <span> Litros </span>
+          </div>
+
+
+        <button type="submit" class="btn btn-dark">Guardar</button>
+    </form>
+</div>

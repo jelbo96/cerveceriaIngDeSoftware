@@ -45,6 +45,33 @@ export class ClientService {
     return this.http.get(this.baseUrl + "/delivery");
   }
 
+
+  public add_bash(bash) {
+    var name_bash = "" + bash.name_bash + "";
+    var type_beer = "" + bash.type_beer + "";;
+    var capacity = "" + bash.capacity + "";
+    //var liters_now = "" + bash.capacity + "";
+    return this.http
+      .post(this.baseUrl + "/bash", {
+        name_bash: name_bash,
+        type_beer: type_beer,
+        capacity: capacity,
+        liters_now: capacity
+      })
+      .subscribe(
+        val => {
+          console.log("POST call successful value returned in body", val);
+        },
+        response => {
+          console.log("POST call in error", response);
+        },
+        () => {
+          console.log("The POST observable is now completed.");
+        }
+      );
+  }
+
+
   public add_deliveries(delivery) {
     var type_beer = "" + delivery.type_beer + "";
     var liters = "" + delivery.liters + "";;

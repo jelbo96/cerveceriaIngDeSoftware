@@ -19,6 +19,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { RegistrarEntregaComponent } from './registrar-entrega/registrar-entrega.component';
 import { DeliveriesComponent } from './deliveries/deliveries.component';
 import { CrearClienteComponent } from './crear-cliente/crear-cliente.component';
+import { BashComponent } from './bash/bash.component';
+import { CrearBashComponent } from './crear-bash/crear-bash.component';
 
 const routes: Route[] = [
   {
@@ -38,6 +40,12 @@ const routes: Route[] = [
   },
   {
     path:'deliveries', component: DeliveriesComponent
+  },
+  {
+    path:'bash', component: BashComponent
+  },
+  {
+    path:'crear-bash', component: CrearBashComponent
   }
 ];
 
@@ -50,6 +58,8 @@ const routes: Route[] = [
     RegistrarEntregaComponent,
     DeliveriesComponent,
     CrearClienteComponent,
+    BashComponent,
+    CrearBashComponent,
 
 
   ],
