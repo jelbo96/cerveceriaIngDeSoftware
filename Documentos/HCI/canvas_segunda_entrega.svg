@@ -351,7 +351,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.55"
      inkscape:cx="1018.3015"
-     inkscape:cy="752.49775"
+     inkscape:cy="2352.4978"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -465,7 +465,7 @@
          x="50.221573"
          y="-1380.9125"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans;text-align:start;text-anchor:start;fill:#555555;fill-opacity:1"
-         id="tspan3048-4">PERSONAS (FALTA NOMBRE)</tspan></text>
+         id="tspan3048-4">PERSONAS</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'7th Service';-inkscape-font-specification:'7th Service';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#555555;fill-opacity:1;stroke:none"
@@ -1018,5 +1018,5 @@
            height="47.272728"
            x="1307.2727"
            y="770.83026" /></flowRegion><flowPara
-         id="flowPara229"></flowPara></flowRoot>  </g>
+         id="flowPara229" /></flowRoot>  </g>
 </svg>
