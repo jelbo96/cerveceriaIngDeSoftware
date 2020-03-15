@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-content">
+    <div class="container responsive-container ">
+        <form method="POST">{% csrf_token %}
+
+            <h5> ¿Esta seguro que desea eliminar la entrega - folio: {{objeto_deliverie.folio}}? </h5>
+            <hr />
+            <button type="submit" class="btn btn-primary button-values">Confirmar</button>
+            <a class="btn btn-light button-values" href="{% url 'entregas' %}"> Cancelar</a>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

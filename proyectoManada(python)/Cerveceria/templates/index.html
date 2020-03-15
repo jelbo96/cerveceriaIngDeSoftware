@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+  <!-- Tabla de servicios -->
+  <div class="container-content">
+    <div class="container responsive-container">
+  
+      <p> Selecciona algún menú de la barra superior para comenzar. 
+
+      <hr/>
+      <h1> Alertas </h1>
+
+
+      <div class="container-alerts">
+       
+        
+        {% for i in bash %}
+        {% if i.liters_now < 50 %}
+        <div class="alert alert-danger" role="alert">
+         
+            <div class="alert-icon" style="text-align: left;">
+              
+              <div style="width: 230px; overflow: hidden;">
+                <strong>Alerta!</strong> Solo quedan:
+                <h2>{{i.liters_now|floatformat:"1"}} litros </h2>
+                de cerveza {{i.type_beer_verbose}} en el <strong> {{i.name_bash}} </strong>
+              </div>
+              <div>
+                <i class="fa fa-exclamation icon" ></i>
+              </div>
+            </div>
+        </div>
+        
+        {% elif i.liters_now < 250 %}
+          <div class="alert alert-warning" role="alert">
+           
+              <div class="alert-icon" style="text-align: left;">
+                
+                <div style="width: 230px; overflow: hidden;">
+                  <strong>Alerta!</strong> Solo quedan:
+                  <h2>{{i.liters_now|floatformat:"1"}} litros </h2>
+                  de cerveza {{i.type_beer_verbose}} en el <strong> {{i.name_bash}} </strong>
+                </div>
+                <div>
+                  <i class="fa fa-exclamation icon" ></i>
+                </div>
+              </div>
+       
+          </div>
+          {% endif %}
+          {% endfor %}
+    
+    
+      </div>
+    
+      <hr/>
+     <h1> Resumen </h1>
+      <p> Proximamente aqui encontrarás un resumen de las entregas semanales </p>
+    
+    </div>
+  </div>
+ 
+</body>
+
+{% endblock %}

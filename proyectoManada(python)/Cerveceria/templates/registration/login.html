@@ -1,0 +1,72 @@
+{% load static %}
+
+{% block content %}
+
+
+<head>
+
+    {# Cargamos la librería #}
+    {% load bootstrap4 %}
+
+    {# CSS Bootstrap #}
+    {% bootstrap_css %}
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title> Proyecto Manada - Iniciar Sesión </title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+</head>
+
+<body>
+    <div class="container-login">
+        <div class="logo">
+
+            <img src="../../static/img/logo_manada_corpo.png" class="logo" alt="My image">
+
+        </div>
+        <div class="vr"></div>
+        <div class="container-login-form">
+            {% if form.errors %}
+            <p>El usuario o la contraseña no coinciden, intentelo nuevamente.</p>
+            {% endif %}
+
+            {% if next %}
+            {% if user.is_authenticated %}
+            <p>Su cuenta no tiene acceso a esta pagina. Para continuar por favor use una cuenta que tenga acceso</p>
+            {% else %}
+            <p>Por favor inicie sesion para acceder a esta pagina</p>
+            {% endif %}
+            {% endif %}
+
+            <h5 style="padding:1em"> Registro Entregas Manada - Iniciar Sesión</h5>
+            <form method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"> Usuario </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="usuario" name="username" id="id_username"
+                        aria-label="usuario" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"> Contraseña </span>
+                    </div>
+                    <input class="form-control" placeholder="contraseña" aria-label="contraseña" id="id_password"
+                        name="password" type="password" aria-describedby="basic-addon1">
+                </div>
+
+
+                <div>
+                    <button type="submit" class="btn btn-dark">Iniciar Sesión</button>
+                    <input type="hidden" name="next" value="{{ next }}" />
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+{% endblock %}

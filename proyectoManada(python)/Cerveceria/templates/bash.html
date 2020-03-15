@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/bash.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<body>
+    <div class="container-content overflow-table">
+
+        <div class="container responsive-container">
+            <h2>Configuración de los Bash</h2>
+            <hr />
+            {% if user.get_username == "SuperManada" %}
+            <a type="button" class="btn btn-dark" href="{% url 'añadirBash' %}">Añadir Bash</a> <br /><br />
+            {% endif %}
+            <!--    <div class="container-update-bash">
+                <h4 class="padding-form"> Actualizar Bash </h4>
+                <div class="vl"></div>
+                <form>
+                    <span class="label-left">Elegir Bash: </span>
+                    <select class="form-control-inline padding-form">
+                        {% for i in bash%}
+                        <option> {{i.name_bash}} </option>
+                        {% endfor %}
+                    </select>
+                    <span class="label-left">Litros disponibles: </span>
+                    <input type="number" name="quantity" min="1" max="500" class=padding-form>
+                    <button type="submit" class="btn btn-dark">Confirmar</button>
+                </form>
+
+            </div> -->
+
+            <table id="example-table" class="table table-sm table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Tipo cerveza</th>
+                        <th scope="col">Folio</th>
+                        <th scope="col">Capacidad total [litros]</th>
+                        <th scope="col">Capacidad actual [litros]</th>
+                        {% if user.get_username == "SuperManada" %}
+                        <th scope="col">Acciones</th>
+                        {% endif %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in bash %}
+                    <tr>
+                        <td>{{i.name_bash}}</td>
+                        <td>{{i.type_beer_verbose}}</td>
+                        <td>{{i.folio}}</td>
+                        <td>{{i.capacity|floatformat:"1"}}</td>
+                        <td>{{i.liters_now|floatformat:"1"}}</td>
+
+                        {% if user.get_username == "SuperManada" %}
+
+                        <td style="width:230px">
+                            <a href="{% url 'editarBash' i.id %}" class="btn btn-secondary"> <i
+                                    class="fa fa-edit icon"></i> Editar</a>
+                            <span> &nbsp; </span>
+
+                            <a href="{% url 'eliminarBash' i.id %}" class="btn btn-danger"> <i
+                                    class="fa fa-trash icon"></i> Eliminar</a>
+                        </td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+
+
+
+    </div>
+
+</body>
+
+{% endblock %}

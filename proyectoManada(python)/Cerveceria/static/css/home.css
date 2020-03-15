@@ -1,0 +1,33 @@
+.container-home{
+    max-width:1000px;
+    padding:1em;
+    margin-left:auto;
+    margin-right:auto;
+}
+.container-alerts{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+.warning{
+ width: 320px;
+ padding:.5em;
+}
+.danger{
+    width: 320px;
+    padding:.5em;
+}
+.alert-icon{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+.icon{
+    font-size: 6em;
+}
+.alert-danger{
+    margin:4px !important;
+}
+.alert-warning{
+    margin:4px !important;
+}

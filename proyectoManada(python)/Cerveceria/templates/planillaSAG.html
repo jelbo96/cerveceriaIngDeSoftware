@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load tags %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/entregas.css' %}">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+{% endblock %}
+
+{% block content %}
+
+<body>
+    <div class="container-content overflow-table">
+
+        <div class="container responsive-container">
+            <h2>Registro SAG</h2>
+            <hr />
+
+            <!-- Si se necesita datatable añadir id="example-table" -->
+            <table id="example-table" class="table table-sm table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Mes</th>
+                        <th scope="col">Fecha de Producción</th>
+                        <th scope="col">Variedad de Cerveza</th>
+                        <th scope="col">°GI</th>
+                        <th scope="col">Estanque</th>
+                        <th scope="col">Volumen de Produccion</th>
+                        <th scope="col">Guia o Factura</th>
+                        <th scope="col">Destino</th>
+                        <th scope="col">Presentacion Final Producto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for delivery in entregas %}
+                    <tr>
+                        <td>{% obtener_mes_completo delivery.delivery_date %}</td>
+                        <td> {{delivery.delivery_date|date:"d-M-Y" }} </td>
+                        <td>{{delivery.type_beer_verbose}}</td>
+                        <td>*</td>
+                        <td>{% retornar_numero_bash delivery.bash.name_bash %}</td>
+                        <td>{{delivery.bash.capacity|floatformat:0}} [lts]</td>
+                       
+                        <td>{{delivery.folio}}</td>
+                        <td>{{delivery.client.name}}</td>
+                        <td>{{delivery.liters|floatformat:1}} [lts] / {{delivery.package_verbose}}</td>
+                    </tr>
+
+                    {% endfor %}
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+{% endblock %}

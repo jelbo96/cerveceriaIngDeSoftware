@@ -1,0 +1,17 @@
+.bordered-table{
+    border:1px solid #343a40;
+}
+.container-update-bash{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.padding-form{
+    margin-right: 20px;
+}
+.vl {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    height: 30px;
+    padding-left: 20px;
+  }

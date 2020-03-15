@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-content">
+   
+    <div class="container responsive-container ">
+        {% if user.get_username == "SuperManada" %}
+
+        <form method="POST">{% csrf_token %}
+
+            <h5> ¿Esta seguro que desea eliminar el bash: {{objeto_bash.name_bash}}? </h5>
+            <hr />
+            <button type="submit" class="btn btn-primary button-values">Confirmar</button>
+            <a class="btn btn-light button-values" href="{% url 'bash' %}"> Cancelar</a>
+        </form>
+        {% else %}
+        <p> No tienes acceso a esta pagina.</p>
+        {% endif %}
+    </div>
+
+    
+</div>
+
+{% endblock %}

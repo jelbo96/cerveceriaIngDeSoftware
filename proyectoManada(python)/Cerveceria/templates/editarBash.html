@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+{% load bootstrap4 %}
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+
+    <div class="container-content">
+        {% if user.get_username == "SuperManada" %}
+
+        <div class="container responsive-container ">
+            
+            <h2> <a href="{% url 'bash' %}" class="btn btn-light"> <i class="fa fa-arrow-left "></i> </a> Editar bash </h2>
+
+            <hr />
+            <p>* Todos los campos son requeridos.</p>
+            <form method="POST" class="post-form">{% csrf_token %}
+                {% bootstrap_form form layout="horizontal" label_class="form-label col-md-3" %}
+
+
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-success" role="alert">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
+
+                <button type="submit" class="btn btn-primary button-values">Confirmar</button>
+               
+        </div>
+        {% else %}
+        <p> No tienes acceso a esta pagina.</p>
+        {% endif %}
+    </div>
+
+
+</body>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+    <div class="container-content overflow-table" >
+        <div class="container responsive-container">
+        <h2>Clientes</h2>
+        <hr />
+        <a type="button" class="btn btn-dark" href="{% url 'añadirCliente' %}">Añadir Cliente</a> <br /><br />
+        <table id="example-table" class="table table-sm table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Nombre del Cliente</th>
+              <th scope="col">Direccion</th>
+              <th scope="col">Mail</th>
+              <th scope="col">N° de Contacto</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for client in clientes %}
+            <tr>
+              <td>{{client.name}}</td>
+              <td>{{client.address}}</td>
+              <td>{{client.mail}}</td>
+              <td>{{client.contact_number}}</td>
+              <td style="width:230px">
+                <a href="{% url 'editarCliente' client.id %}" class="btn btn-secondary"> <i class="fa fa-edit icon"></i> Editar</a>
+                <span> &nbsp; </span>
+                <a href="{% url 'eliminarCliente' client.id %}" class="btn btn-danger"> <i class="fa fa-trash icon"></i> Eliminar</a> 
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+</body>
+
+{% endblock %}

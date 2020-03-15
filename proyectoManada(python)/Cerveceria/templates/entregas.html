@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/entregas.css' %}">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+
+    <div class="container-content overflow-table">
+
+        <div class="container responsive-container">
+            <h2>Entregas</h2>
+            <hr />
+            <a type="button" class="btn btn-dark" href="{% url 'registrarEntrega' %}">Registrar Entrega</a> <br /><br />
+            <table id="example-table" class="table table-sm table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Fecha - Hora</th>
+                        <th scope="col">Folio</th>
+                        <th scope="col">Tipo de Cerveza</th>
+                        <th scope="col">Litros</th>
+                        <th scope="col">Tipo de empaque</th>
+                        <th scope="col">Cliente</th>
+                        <th scope="col">Bash</th>
+                    
+                        {% if user.get_username == "SuperManada" %}
+                        <th scope="col">Usuario</th>
+                        {% endif %}
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for delivery in entregas %}
+                    <tr>
+
+                        <td>{{delivery.delivery_date|date:"d-M-Y" }} {{delivery.delivery_date|time:"h:i a" }}</td>
+                        <td>{{delivery.folio}}</td>
+                        <td>{{delivery.type_beer_verbose}}</td>
+                        <td>{{delivery.liters|floatformat:"1"}}</td>
+
+                        <td>{{delivery.package_verbose}}</td>
+                        <td>{{delivery.client.name}}</td>
+                        <td>{{delivery.bash.name_bash}}</td>
+                        {% if user.get_username == "SuperManada" %}
+                        <td>{{delivery.user}}</td>
+                        {% endif %}
+
+                        <td style="width:170px">
+
+                            {% if delivery.additional_info != "" %}
+                            <a href="#" type="button" class="btn btn-secondary" data-toggle="tooltip"
+                                data-placement="top" title="{{delivery.additional_info}}" style="font-size: 1rem;"> <i
+                                    class="fa fa-info icon"></i>
+                                <span class="tooltiptext"> </span>
+
+                            </a>
+                            <span> &nbsp; </span>
+                            {% endif %}
+
+
+                            <a href="{% url 'editarEntrega' delivery.id %}" class="btn btn-secondary"> <i
+                                    class="fa fa-edit icon"></i> </a>
+                            <span> &nbsp; </span>
+
+                            <a href="{% url 'eliminarEntrega' delivery.id %}" class="btn btn-danger"> <i
+                                    class="fa fa-trash icon"></i> </a>
+
+
+                        </td>
+
+                        {% endfor %}
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        });
+
+    </script>
+
+</body>
+
+{% endblock %}
